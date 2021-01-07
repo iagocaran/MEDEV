@@ -10,11 +10,17 @@
 
 using namespace std;
 
-bool Bateau::estTouche(Point p)
+/**
+ * @brief Verifies if one of the boat parts is in target position
+ * @param target Point against which the check is made
+ * @return true if the boat was touched
+ * false otherwise
+ */
+bool Bateau::estTouche(Point target)
 {
     for (int i = 0; i< PositionsBateau.size(); i++)
     {
-        if (p == PositionsBateau[i])
+        if (target == PositionsBateau[i])
         {
             //si le bateau est touche, on retire le point touche de la liste
             //des coordonnee du bateau et on renvoie true
@@ -25,11 +31,21 @@ bool Bateau::estTouche(Point p)
     return false;
 }
 
+/**
+ * @brief Checks if the boat is alive
+ * @return returns true if there are still parts of the boat left
+ * false otherwise
+ */
 bool Bateau::estEnVie()
 {
     return PositionsBateau.size() > 0;
 }
 
+/**
+ * @brief Constructor
+ * Takes a ListePositions as positions to initialize the boat
+ * @param ListePositions list of positions for the boat parts
+ */
 Bateau::Bateau(vector<Point> const& ListePositions)
 {
     for (int i=0; i<ListePositions.size(); i++)
@@ -38,6 +54,10 @@ Bateau::Bateau(vector<Point> const& ListePositions)
     }
 }
 
+/**
+ * @brief returns the positions of the boat
+ * @return a reference to the positions of the boat
+ */
 vector<Point>& Bateau::getPositionsBateau()
 {
     return PositionsBateau;
