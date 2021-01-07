@@ -12,7 +12,7 @@ using namespace std;
 
 /**
  * @brief Verifies if one of the boat parts is in target position
- * @param target Point against which the check is made
+ * @param target Takes the Point against which the check is made
  * @return true if the boat was touched
  * false otherwise
  */
@@ -33,17 +33,17 @@ bool Bateau::estTouche(Point target)
 
 /**
  * @brief Checks if the boat is alive
- * @return returns true if there are still parts of the boat left
+ * @return true if there are still parts of the boat left
  * false otherwise
  */
 bool Bateau::estEnVie()
 {
-    return PositionsBateau.size() > 0;
+    return !PositionsBateau.empty();
 }
 
 /**
- * @brief Constructor
  * Takes a ListePositions as positions to initialize the boat
+ * @brief Constructor
  * @param ListePositions list of positions for the boat parts
  */
 Bateau::Bateau(vector<Point> const& ListePositions)
@@ -55,8 +55,8 @@ Bateau::Bateau(vector<Point> const& ListePositions)
 }
 
 /**
- * @brief returns the positions of the boat
- * @return a reference to the positions of the boat
+ * @brief Returns the positions of the boat
+ * @return A reference to the positions of the boat
  */
 vector<Point>& Bateau::getPositionsBateau()
 {

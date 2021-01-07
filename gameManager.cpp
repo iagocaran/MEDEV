@@ -36,10 +36,10 @@ bool verifierCase(Point point, vector<Point> listePoints)
 }
 
 /**
- * @brief Controls the boat placing of each player.
  * Must be called once for each player before the start of a match.
- * @param player reference to the player whose boats will be placed
- * @param grid reference to the active grid
+ * @brief Controls the boat placing of each player.
+ * @param player Reference to the player whose boats will be placed
+ * @param grid Reference to the active grid
  */
 void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& grid)
 {
@@ -148,9 +148,9 @@ void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& grid)
 
 /**
  * @brief Manages player turns
- * @param player reference to the player that should play
- * @param opponent reference to the opponent of the player
- * @param grid reference to the active grid
+ * @param player Reference to the player that should play
+ * @param opponent Reference to the opponent of the player
+ * @param grid Reference to the active grid
  */
 void GameManager::tourJoueur(Joueur* player, Joueur* opponent, Grille &grid)
 {

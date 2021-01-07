@@ -13,8 +13,8 @@
 #include "point.hpp"
 
 /**
+ * Associated functions will help to determine if it was targeted and if it's still alive
  * @brief Represents a boat with it's positions
- * The associated functions will help to determine if it was targeted and if it's still alive
  */
 class Bateau
 {
