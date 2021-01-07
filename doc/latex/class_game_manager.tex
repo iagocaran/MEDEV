@@ -13,7 +13,7 @@ Manages player turns.
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_game_manager_af69ea6b1db501a17ab15fda41f42376c}{mise\+En\+Place\+Bateaux}} (\mbox{\hyperlink{class_joueur}{Joueur}} $\ast$player, \mbox{\hyperlink{class_grille}{Grille}} \&grid)
-\begin{DoxyCompactList}\small\item\em Controls the boat placing of each player. Must be called once for each player before the start of a match. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Controls the boat placing of each player. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_game_manager_a2a61403db4fce51fff3af16cb95a7caf}{tour\+Joueur}} (\mbox{\hyperlink{class_joueur}{Joueur}} $\ast$player, \mbox{\hyperlink{class_joueur}{Joueur}} $\ast$opponent, \mbox{\hyperlink{class_grille}{Grille}} \&grid)
 \begin{DoxyCompactList}\small\item\em Manages player turns. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -30,13 +30,13 @@ Manages player turns.
 
 
 
-Controls the boat placing of each player. Must be called once for each player before the start of a match. 
+Controls the boat placing of each player. 
 
-
+Must be called once for each player before the start of a match. 
 \begin{DoxyParams}{Parameters}
-{\em player} & reference to the player whose boats will be placed \\
+{\em player} & Reference to the player whose boats will be placed \\
 \hline
-{\em grid} & reference to the active grid \\
+{\em grid} & Reference to the active grid \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{class_game_manager_a2a61403db4fce51fff3af16cb95a7caf}\label{class_game_manager_a2a61403db4fce51fff3af16cb95a7caf}} 
@@ -51,11 +51,11 @@ Manages player turns.
 
 
 \begin{DoxyParams}{Parameters}
-{\em player} & reference to the player that should play \\
+{\em player} & Reference to the player that should play \\
 \hline
-{\em opponent} & reference to the opponent of the player \\
+{\em opponent} & Reference to the opponent of the player \\
 \hline
-{\em grid} & reference to the active grid \\
+{\em grid} & Reference to the active grid \\
 \hline
 \end{DoxyParams}
 
