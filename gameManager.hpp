@@ -12,14 +12,14 @@
 #include "joueur.hpp"
 #include "grille.hpp"
 
+/**
+ * Manages player turns
+ */
 class GameManager
 {
 public:
     void miseEnPlaceBateaux(Joueur* player, Grille& grid);
-    
-    //Gere le tour d'un joueur
-    void tourJoueur(Joueur* j, Joueur* adversaire, Grille &g);
-    
+    void tourJoueur(Joueur* player, Joueur* opponent, Grille &grid);
 };
 
 #endif /* gameManager_hpp */

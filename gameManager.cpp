@@ -16,11 +16,18 @@ using namespace std;
 
 //verifie si un Point est deja present dans le vector de Point donne en parametre
 //si le point est present dans la liste de point, retourne faux (faux pour case invalide)
-bool verifierCase(Point p, vector<Point> listePoints)
+/**
+ * Verifies if a Point is inside listePoints
+ * @param point : point to be verified
+ * @param listePoints : list of points in which to verify
+ * @return true if point inside listePoints
+ * false otherwise
+ */
+bool verifierCase(Point point, vector<Point> listePoints)
 {
     for (Point x : listePoints)
     {
-        if (x == p)
+        if (x == point)
         {
             return false;
         }
@@ -28,11 +35,12 @@ bool verifierCase(Point p, vector<Point> listePoints)
     return true;
 }
 
-
-/// miseEnPlaceBateaux controls the boat placing of each player.
-/// Must be called once for each player before the start of a match.
-/// @param player
-/// @param grid
+/**
+ * Controls the boat placing of each player.
+ * Must be called once for each player before the start of a match.
+ * @param player reference to the player whose boats will be placed
+ * @param grid reference to the active grid
+ */
 void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& grid)
 {
     cout << "Veuillez placer vos bateaux" << endl;
@@ -138,13 +146,18 @@ void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& grid)
     }
 }
 
-
-void GameManager::tourJoueur(Joueur* j, Joueur* adversaire, Grille &g)
+/**
+ * Manages player turns
+ * @param player reference to the player that should play
+ * @param opponent reference to the opponent of the player
+ * @param grid reference to the active grid
+ */
+void GameManager::tourJoueur(Joueur* player, Joueur* opponent, Grille &grid)
 {
     bool attaqueReussi = true;
     while(attaqueReussi)
     {
-        attaqueReussi = j->attaquer(adversaire);
+        attaqueReussi = player->attaquer(opponent);
         if (attaqueReussi)
         {
             cout << "touché ! Veuillez rejouer" << endl;
@@ -153,6 +166,6 @@ void GameManager::tourJoueur(Joueur* j, Joueur* adversaire, Grille &g)
         {
             cout << "Plouf ! Attaque loupée" << endl;
         }
-        g.afficherGrille();
+        grid.afficherGrille();
     }
 }
