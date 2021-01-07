@@ -17,7 +17,7 @@ using namespace std;
 //verifie si un Point est deja present dans le vector de Point donne en parametre
 //si le point est present dans la liste de point, retourne faux (faux pour case invalide)
 /**
- * Verifies if a Point is inside listePoints
+ * @brief Verifies if a Point is inside listePoints
  * @param point : point to be verified
  * @param listePoints : list of points in which to verify
  * @return true if point inside listePoints
@@ -36,7 +36,7 @@ bool verifierCase(Point point, vector<Point> listePoints)
 }
 
 /**
- * Controls the boat placing of each player.
+ * @brief Controls the boat placing of each player.
  * Must be called once for each player before the start of a match.
  * @param player reference to the player whose boats will be placed
  * @param grid reference to the active grid
@@ -147,7 +147,7 @@ void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& grid)
 }
 
 /**
- * Manages player turns
+ * @brief Manages player turns
  * @param player reference to the player that should play
  * @param opponent reference to the opponent of the player
  * @param grid reference to the active grid
