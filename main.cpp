@@ -7,23 +7,21 @@
 //
 #define GL_SILENCE_DEPRECATION
 
+#include <Windows.h>
 #include <iostream>
-
-#include <GLUT/GLUT.h>
-#include <OpenGL/OpenGL.h>
-
+#include <GL/glut.h>
+#include <GL/gl.h>
 #include "point.hpp"
 #include "grille.hpp"
 #include "JoueurReel.h"
 #include "gameManager.hpp"
 
-JoueurReel *j1 = new JoueurReel;
-JoueurReel *j2 = new JoueurReel;
+JoueurReel *joueur1 = new JoueurReel();
+JoueurReel *joueur2 = new JoueurReel();
 
-Grille g(10, j1, j2);
+Grille g(10, joueur1, joueur2);
 
 GameManager GM;
-
 void affichageJeu()
 {
     g.afficherGrille();
@@ -42,7 +40,6 @@ void clavier(unsigned char key, int xx, int yy) {
 
 // Le main
 int main(int argc, char** argv) {
-
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowPosition(Grille::default_x, Grille::default_y);
@@ -53,19 +50,18 @@ int main(int argc, char** argv) {
 
     glutMainLoop();
     
-    
     cout << "Au premier joueur de placer ses bateaux" << endl;
-    GM.miseEnPlaceBateaux(j1, g);
+    GM.miseEnPlaceBateaux(joueur1, g);
     
     cout << "Au deuxieme joueur de placer ses bateaux" << endl;
-    GM.miseEnPlaceBateaux(j2, g);
+    GM.miseEnPlaceBateaux(joueur2, g);
      
      while (!g.partieFinie())
      {
          cout << "A J1 d'attaquer" << endl;
-         GM.tourJoueur(j1, j2, g);
+         GM.tourJoueur(joueur1, joueur2, g);
          cout << "A J2 d'attaquer" << endl;
-         GM.tourJoueur(j2, j1, g);
+         GM.tourJoueur(joueur2, joueur1, g);
      }
     
     return 0;

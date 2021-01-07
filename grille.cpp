@@ -10,8 +10,8 @@
 #include "grille.hpp"
 #include <iostream>
 
-#include <GLUT/GLUT.h>
-#include <OpenGL/OpenGL.h>
+#include <GL/glut.h>
+#include <GL/gl.h>
 
 using namespace std;
 
