@@ -10,7 +10,7 @@
 #include "joueur.hpp"
 
 /**
- * An idea on how to implement a little more advanced AI player
+ * @brief An idea on how to implement a little more advanced AI player
  */
 class joueurIAPlus {
 private:
