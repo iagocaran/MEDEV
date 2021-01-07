@@ -29,6 +29,10 @@ bool verifierCase(Point p, vector<Point> listePoints)
 }
 
 
+/// miseEnPlaceBateaux controls the boat placing of each player.
+/// Must be called once for each player before the start of a match.
+/// @param player
+/// @param grid
 void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& grid)
 {
     cout << "Veuillez placer vos bateaux" << endl;
