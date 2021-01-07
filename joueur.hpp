@@ -14,6 +14,9 @@
 #include "point.hpp"
 #include "bateau.hpp"
 
+/**
+ * Abstract class to represent a player
+ */
 class Joueur
 {
 private:
@@ -25,12 +28,9 @@ public:
     bool dejaTeste(Point p);
     std::vector<Bateau>& getListeBateau();
     std::vector<Point>& getDejaTeste();
-    
     //Verifie si une attaque est reussie 
     bool detruire(Point p);
-    
     void ajouterBateau(Bateau b);
-    
 };
 
 #endif /* joueur_hpp */

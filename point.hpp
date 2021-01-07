@@ -9,15 +9,16 @@
 #ifndef point_hpp
 #define point_hpp
 
+/**
+ * @brief Represents a pair x, y of coordinates
+ */
 class Point
 {
 public:
-    
     Point();
     Point(float x, float y);
     float getX() const;
     float getY() const;
-    
 private:
     float m_x,m_y;
 };

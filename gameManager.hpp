@@ -13,7 +13,7 @@
 #include "grille.hpp"
 
 /**
- * Manages player turns
+ * @brief Manages player turns
  */
 class GameManager
 {
