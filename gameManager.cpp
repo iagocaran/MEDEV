@@ -29,8 +29,7 @@ bool verifierCase(Point p, vector<Point> listePoints)
 }
 
 
-//A appeler en debut de partie pour chaque joueur pour qu'il place ses bateaux
-void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& g)
+void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& grid)
 {
     cout << "Veuillez placer vos bateaux" << endl;
     cout << "Vous en possedez 5 en tout, 2 de longueur 2, puis 1 de longueur 3,4 et 5" << endl;
@@ -89,17 +88,17 @@ void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& g)
             }
             
             //si le point entre est en dehors de la grille, ce n'est pas valide
-            if (x<0 || x > g.getTaille() || y < 0 || y > g.getTaille())
+            if (x<0 || x > grid.getTaille() || y < 0 || y > grid.getTaille())
             {
                 positionValide = false;
             }
             //si le bateau est place horizontalement et depasse de la grille, ce n'est pas valide
-            else if ((choixSens == 0) && (x+longueurBateaux[i] >g.getTaille()))
+            else if ((choixSens == 0) && (x+longueurBateaux[i] > grid.getTaille()))
             {
                 positionValide = false;
             }
             //si le bateau est place verticalement et depasse de la grille, ce n'est pas valide
-            else if ((choixSens == 1) && (y+longueurBateaux[i]>g.getTaille()))
+            else if ((choixSens == 1) && (y+longueurBateaux[i] > grid.getTaille()))
             {
                 positionValide = false;
             }
@@ -121,7 +120,7 @@ void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& g)
                     {
                         caseDejaOccupee.push_back(x);
                     }
-                    //Et on ajoute le bateau a la liste de bateau du joueur
+                    //Et on ajoute le bateau a la liste de bateau du player
                     Bateau b(placeHypothetique);
                     player->ajouterBateau(b);
             }
@@ -131,7 +130,7 @@ void GameManager::miseEnPlaceBateaux(Joueur* player, Grille& g)
             }
         }
         //et on affiche la grille chaque fois qu'on a place un bateau
-        g.afficherGrille();
+        grid.afficherGrille();
     }
 }
 

@@ -15,8 +15,13 @@
 class GameManager
 {
 public:
-    //A appeler en debut de partie pour chaque joueur pour qu'il place ses bateaux
-    void miseEnPlaceBateaux(Joueur* j, Grille& g);
+    /**
+     * @brief miseEnPlaceBateaux controls the boat placing of each player.
+     * Must be called once for each player before the start of a match.
+     * @param player
+     * @param grid
+     */
+    void miseEnPlaceBateaux(Joueur* player, Grille& grid);
     
     //Gere le tour d'un joueur
     void tourJoueur(Joueur* j, Joueur* adversaire, Grille &g);
