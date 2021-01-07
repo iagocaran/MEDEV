@@ -15,7 +15,7 @@
 #include "bateau.hpp"
 
 /**
- * Abstract class to represent a player
+ * @brief Abstract class to represent a player
  */
 class Joueur
 {
