@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>TDDoc: C:/Users/iagoc/Documents/Centrale/EI2/MEDEV/TDDoc/joueur.hpp Source File</title>
+<title>TDDoc: joueur.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -45,6 +45,7 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +60,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_a82d89ce21bf129dee9f9af212e3bc79.html">iagoc</a></li><li class="navelem"><a class="el" href="dir_9d0a27942ef356cd33069a3f8ce14234.html">Documents</a></li><li class="navelem"><a class="el" href="dir_2621f1290e2b60fde6605dbc3d7c7771.html">Centrale</a></li><li class="navelem"><a class="el" href="dir_1b1797e798528f52c1baf1906ffde436.html">EI2</a></li><li class="navelem"><a class="el" href="dir_058e1f0867567e26d051ce71b0fd0eee.html">MEDEV</a></li><li class="navelem"><a class="el" href="dir_1cb5a16366a0d7eeb409ad51deae3aa8.html">TDDoc</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">joueur.hpp</div>  </div>
@@ -85,30 +81,27 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;point.hpp&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;bateau.hpp&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_joueur.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_joueur.html">Joueur</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::vector&lt;Point&gt; DejaTeste;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::vector&lt;Bateau&gt; ListeBateau;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> aPerdu();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> attaquer(<a class="code" href="class_joueur.html">Joueur</a>* j)=0;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> dejaTeste(<a class="code" href="class_point.html">Point</a> p);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::vector&lt;Bateau&gt;&amp; getListeBateau();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::vector&lt;Point&gt;&amp; getDejaTeste();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">//Verifie si une attaque est reussie </span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> detruire(<a class="code" href="class_point.html">Point</a> p);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> ajouterBateau(<a class="code" href="class_bateau.html">Bateau</a> b);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_joueur.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_joueur.html">Joueur</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::vector&lt;Point&gt; DejaTeste;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::vector&lt;Bateau&gt; ListeBateau;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> aPerdu();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> attaquer(<a class="code" href="class_joueur.html">Joueur</a>* j)=0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> dejaTeste(<a class="code" href="class_point.html">Point</a> p);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt;Bateau&gt;&amp; getListeBateau();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::vector&lt;Point&gt;&amp; getDejaTeste();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//Verifie si une attaque est reussie </span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> detruire(<a class="code" href="class_point.html">Point</a> p);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> ajouterBateau(<a class="code" href="class_bateau.html">Bateau</a> b);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* joueur_hpp */</span><span class="preprocessor"></span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="ttc" id="aclass_bateau_html"><div class="ttname"><a href="class_bateau.html">Bateau</a></div><div class="ttdef"><b>Definition:</b> bateau.hpp:16</div></div>
-<div class="ttc" id="aclass_joueur_html"><div class="ttname"><a href="class_joueur.html">Joueur</a></div><div class="ttdef"><b>Definition:</b> joueur.hpp:18</div></div>
-<div class="ttc" id="aclass_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdef"><b>Definition:</b> point.hpp:13</div></div>
+<div class="ttc" id="aclass_bateau_html"><div class="ttname"><a href="class_bateau.html">Bateau</a></div><div class="ttdoc">Represents a boat with it's positions The associated functions will help to determine if it was targe...</div><div class="ttdef"><b>Definition:</b> bateau.hpp:20</div></div>
+<div class="ttc" id="aclass_joueur_html"><div class="ttname"><a href="class_joueur.html">Joueur</a></div><div class="ttdef"><b>Definition:</b> joueur.hpp:21</div></div>
+<div class="ttc" id="aclass_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdoc">Represents a pair x, y of coordinates.</div><div class="ttdef"><b>Definition:</b> point.hpp:16</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

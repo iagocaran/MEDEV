@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['medev_5',['MEDEV',['../md__c___users_iagoc__documents__centrale__e_i2__m_e_d_e_v__t_d_doc__r_e_a_d_m_e.html',1,'']]]
+  ['joueur_6',['Joueur',['../class_joueur.html',1,'']]],
+  ['joueuria_7',['JoueurIA',['../class_joueur_i_a.html',1,'']]],
+  ['joueuriaplus_8',['joueurIAPlus',['../classjoueur_i_a_plus.html',1,'']]],
+  ['joueurreel_9',['JoueurReel',['../class_joueur_reel.html',1,'']]]
 ];

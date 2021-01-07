@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gamemanager_1',['GameManager',['../class_game_manager.html',1,'']]],
-  ['grille_2',['Grille',['../class_grille.html',1,'']]]
+  ['estenvie_1',['estEnVie',['../class_bateau.html#a66e2ea1561e54780953c28d1f2682ffa',1,'Bateau']]],
+  ['esttouche_2',['estTouche',['../class_bateau.html#a985f5ad82da5ce08fdba8449cb0a8b1d',1,'Bateau']]]
 ];

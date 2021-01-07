@@ -1,23 +1,96 @@
 \hypertarget{class_bateau}{}\doxysection{Bateau Class Reference}
 \label{class_bateau}\index{Bateau@{Bateau}}
+
+
+Represents a boat with it\textquotesingle{}s positions The associated functions will help to determine if it was targeted and if it\textquotesingle{}s still alive.  
+
+
+
+
+{\ttfamily \#include $<$bateau.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_bateau_a1ebb43f33cc782ada59581472534a60d}{Bateau}} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ const \&Liste\+Positions)
+\begin{DoxyCompactList}\small\item\em Constructor Takes a Liste\+Positions as positions to initialize the boat. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bateau_a985f5ad82da5ce08fdba8449cb0a8b1d}{est\+Touche}} (\mbox{\hyperlink{class_point}{Point}} target)
+\begin{DoxyCompactList}\small\item\em Verifies if one of the boat parts is in target position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bateau_a66e2ea1561e54780953c28d1f2682ffa}{est\+En\+Vie}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the boat is alive. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \& \mbox{\hyperlink{class_bateau_a3c7bd035d80bc4b95e06b1a7c59b8334}{get\+Positions\+Bateau}} ()
+\begin{DoxyCompactList}\small\item\em returns the positions of the boat \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a boat with it\textquotesingle{}s positions The associated functions will help to determine if it was targeted and if it\textquotesingle{}s still alive. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_bateau_a1ebb43f33cc782ada59581472534a60d}\label{class_bateau_a1ebb43f33cc782ada59581472534a60d}} 
-{\bfseries Bateau} (std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ const \&Liste\+Positions)
-\item 
-\mbox{\Hypertarget{class_bateau_a5159a43ee8fad5af96a26db81ddb8b02}\label{class_bateau_a5159a43ee8fad5af96a26db81ddb8b02}} 
-bool {\bfseries est\+Touche} (\mbox{\hyperlink{class_point}{Point}} p)
-\item 
+\index{Bateau@{Bateau}!Bateau@{Bateau}}
+\index{Bateau@{Bateau}!Bateau@{Bateau}}
+\doxysubsubsection{\texorpdfstring{Bateau()}{Bateau()}}
+{\footnotesize\ttfamily Bateau\+::\+Bateau (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ const \&}]{Liste\+Positions }\end{DoxyParamCaption})}
+
+
+
+Constructor Takes a Liste\+Positions as positions to initialize the boat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Liste\+Positions} & list of positions for the boat parts \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{class_bateau_a66e2ea1561e54780953c28d1f2682ffa}\label{class_bateau_a66e2ea1561e54780953c28d1f2682ffa}} 
-bool {\bfseries est\+En\+Vie} ()
-\item 
+\index{Bateau@{Bateau}!estEnVie@{estEnVie}}
+\index{estEnVie@{estEnVie}!Bateau@{Bateau}}
+\doxysubsubsection{\texorpdfstring{estEnVie()}{estEnVie()}}
+{\footnotesize\ttfamily bool Bateau\+::est\+En\+Vie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the boat is alive. 
+
+\begin{DoxyReturn}{Returns}
+returns true if there are still parts of the boat left false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bateau_a985f5ad82da5ce08fdba8449cb0a8b1d}\label{class_bateau_a985f5ad82da5ce08fdba8449cb0a8b1d}} 
+\index{Bateau@{Bateau}!estTouche@{estTouche}}
+\index{estTouche@{estTouche}!Bateau@{Bateau}}
+\doxysubsubsection{\texorpdfstring{estTouche()}{estTouche()}}
+{\footnotesize\ttfamily bool Bateau\+::est\+Touche (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_point}{Point}}}]{target }\end{DoxyParamCaption})}
+
+
+
+Verifies if one of the boat parts is in target position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & \mbox{\hyperlink{class_point}{Point}} against which the check is made \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the boat was touched false otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_bateau_a3c7bd035d80bc4b95e06b1a7c59b8334}\label{class_bateau_a3c7bd035d80bc4b95e06b1a7c59b8334}} 
-std\+::vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \& {\bfseries get\+Positions\+Bateau} ()
-\end{DoxyCompactItemize}
+\index{Bateau@{Bateau}!getPositionsBateau@{getPositionsBateau}}
+\index{getPositionsBateau@{getPositionsBateau}!Bateau@{Bateau}}
+\doxysubsubsection{\texorpdfstring{getPositionsBateau()}{getPositionsBateau()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_point}{Point}} $>$ \& Bateau\+::get\+Positions\+Bateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the positions of the boat 
+
+\begin{DoxyReturn}{Returns}
+a reference to the positions of the boat 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/iagoc/\+Documents/\+Centrale/\+EI2/\+MEDEV/\+TDDoc/bateau.\+hpp\item 
-C\+:/\+Users/iagoc/\+Documents/\+Centrale/\+EI2/\+MEDEV/\+TDDoc/bateau.\+cpp\end{DoxyCompactItemize}
+bateau.\+hpp\item 
+bateau.\+cpp\end{DoxyCompactItemize}
