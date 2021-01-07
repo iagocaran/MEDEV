@@ -38,7 +38,12 @@ void clavier(unsigned char key, int xx, int yy) {
     glutPostRedisplay();
 }
 
-// Le main
+/**
+ * @brief Program entry point
+ * @param argc is the number of arguments passed
+ * @param argv is an array of the arguments as strings (char*)
+ * @return exit code to the OS
+ */
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
@@ -64,6 +69,6 @@ int main(int argc, char** argv) {
          GM.tourJoueur(joueur2, joueur1, g);
      }
     
-    return 0;
+    return EXIT_SUCCESS;
 }
 
