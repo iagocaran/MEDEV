@@ -3,7 +3,7 @@ project(TDDoc)
 
 set(CMAKE_CXX_STANDARD 14)
 
-file(GLOB SOURCES *.hpp *.cpp)
+file(GLOB SOURCES src/*.cpp)
 
 add_executable(TDDoc ${SOURCES})
 
