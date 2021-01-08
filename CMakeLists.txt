@@ -7,8 +7,13 @@ file(GLOB SOURCES *.hpp *.cpp)
 
 add_executable(TDDoc ${SOURCES})
 
-if(WIN32)
-    target_include_directories(TDDoc PRIVATE "C:/dev/libs/freeglut/include")
-    target_link_directories(TDDoc PRIVATE "C:/dev/libs/freeglut/lib/x64")
-    target_link_libraries(TDDoc opengl32 freeglut)
-endif()
+include_directories(include)
+
+find_package(OpenGL REQUIRED)
+
+find_package(GLUT REQUIRED)
+
+target_include_directories(TDDoc PRIVATE ${GLUT_INCLUDE_DIR})
+target_include_directories(TDDoc PRIVATE ${OPENGL_INCLUDE_DIR})
+target_link_libraries(TDDoc ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
+
